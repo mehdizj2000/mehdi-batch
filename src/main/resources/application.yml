@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    password: 123456
+    url: jdbc:postgresql://127.0.0.1:5432/postgres
+    username: postgres
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_schema: gnaf_home
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        generate_statistics: true
+    show-sql: true
+  batch:
+    initialize-schema: always
+    datasource:
+      password: 123456
+      url: jdbc:postgresql://127.0.0.1:5432/postgres?currentSchema=batchstuff
+      username: postgres    
